@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/path_laid_noise.mp3-39c4c305266db4f8532640ce2109324b.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/path_laid_noise.mp3"
+dest_files=[ "res://.import/path_laid_noise.mp3-39c4c305266db4f8532640ce2109324b.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -10,9 +10,9 @@ config_version=4
 
 [application]
 
-config/name="It's like they knew..."
+config/name="It's like they knew"
 config/description="Ludum Dar 50 entry!"
-run/main_scene="res://scenes/game/MainGameScene.tscn"
+run/main_scene="res://scenes/menu/Intro.tscn"
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://icon.png"
 
@@ -24,7 +24,6 @@ Global="*res://scripts/objects/Global.gd"
 
 window/size/width=1920
 window/size/height=1080
-window/size/fullscreen=true
 window/stretch/mode="viewport"
 
 [input]

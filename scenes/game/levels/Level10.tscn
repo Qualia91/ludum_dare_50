@@ -1,0 +1,72 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/game/platforms/EndPlatform.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/game/levels/Map.gd" type="Script" id=3]
+[ext_resource path="res://scenes/game/platforms/Platform1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/game/enemies/WindmillMill.tscn" type="PackedScene" id=5]
+
+[node name="Map" type="Spatial"]
+script = ExtResource( 3 )
+
+[node name="End" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 90, 0 )
+
+[node name="P1" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1289, 10, 0 )
+
+[node name="P2" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.128916, 10, 0 )
+
+[node name="P3" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.87108, 10, 0 )
+
+[node name="P4" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, 0 )
+
+[node name="WindmillMill" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 12, 0 )
+
+[node name="P5" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1289, 30.5843, 0 )
+
+[node name="P6" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.128916, 30.5843, 0 )
+
+[node name="P7" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.87108, 30.5843, 0 )
+
+[node name="WindmillMill2" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 32.5843, 0 )
+
+[node name="P8" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 42.5109, 0 )
+
+[node name="P9" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1289, 53.0952, 0 )
+
+[node name="P10" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.128916, 53.0952, 0 )
+
+[node name="P11" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.87108, 53.0952, 0 )
+
+[node name="WindmillMill3" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 55.0952, 0 )
+
+[node name="P12" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 66.9402, 0 )
+
+[node name="P13" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1289, 77.5246, 0 )
+
+[node name="P14" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.128916, 77.5246, 0 )
+
+[node name="P15" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.87108, 77.5246, 0 )
+
+[node name="WindmillMill4" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 79.5246, 0 )
+
+[connection signal="follow_entered" from="End" to="." method="_on_End_follow_entered"]
+[connection signal="player_entered" from="End" to="." method="_on_End_player_entered"]

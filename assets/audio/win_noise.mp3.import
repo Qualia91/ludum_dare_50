@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/win_noise.mp3-e0238151f9f61217e5c15405892c1077.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/win_noise.mp3"
+dest_files=[ "res://.import/win_noise.mp3-e0238151f9f61217e5c15405892c1077.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

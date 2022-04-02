@@ -8,6 +8,16 @@ export var jump_speed = 100
 export var max_jump = 50
 export var slow_down = 1.05
 
+onready var jump_noises = [
+	$Jump1,
+	$Jump2,
+	$Jump3,
+	$Jump4,
+	$Jump5,
+	$Jump6,
+	$Jump7
+]
+
 var velocity = Vector3.ZERO
 var double_jump_active = 0
 
@@ -30,9 +40,11 @@ func get_input(delta):
 	
 	if is_on_floor() and Input.is_action_pressed("up"):
 		velocity.y += jump_speed
+		jump_noises[Global.rng.randi_range(0, jump_noises.size() - 1)].playing = true
 	elif double_jump_active == 1 and not is_on_floor() and Input.is_action_pressed("up"):
 		double_jump_active = 2
 		velocity.y += jump_speed
+		jump_noises[Global.rng.randi_range(0, jump_noises.size() - 1)].playing = true
 	if Input.is_action_pressed("right"):
 		velocity.x += speed
 	if Input.is_action_pressed("left"):

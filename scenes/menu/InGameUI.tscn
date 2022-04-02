@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/fonts/TitleFont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://scripts/menu/InGameUI.gd" type="Script" id=2]
+[ext_resource path="res://assets/audio/death_noise.mp3" type="AudioStream" id=3]
+[ext_resource path="res://assets/audio/win_noise.mp3" type="AudioStream" id=4]
 
 [node name="UI" type="Panel"]
 pause_mode = 2
@@ -16,21 +18,35 @@ __meta__ = {
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_right = 800.0
-margin_bottom = 500.0
-custom_constants/separation = 50
+margin_bottom = 498.0
+custom_constants/separation = 20
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Title" type="Label" parent="VBoxContainer"]
-margin_top = 104.0
+margin_top = 93.0
 margin_right = 800.0
-margin_bottom = 164.0
+margin_bottom = 153.0
 rect_pivot_offset = Vector2( 400, 30 )
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "They did know!"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimeLabel" type="Label" parent="VBoxContainer"]
+margin_top = 173.0
+margin_right = 800.0
+margin_bottom = 233.0
+rect_pivot_offset = Vector2( 400, 30 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 align = 1
 valign = 1
 __meta__ = {
@@ -39,9 +55,9 @@ __meta__ = {
 
 [node name="NextLevelButton" type="Button" parent="VBoxContainer"]
 visible = false
-margin_top = 156.0
+margin_top = 210.0
 margin_right = 800.0
-margin_bottom = 222.0
+margin_bottom = 276.0
 custom_fonts/font = ExtResource( 1 )
 text = "Next Level"
 __meta__ = {
@@ -49,9 +65,9 @@ __meta__ = {
 }
 
 [node name="RetryButton" type="Button" parent="VBoxContainer"]
-margin_top = 214.0
+margin_top = 253.0
 margin_right = 800.0
-margin_bottom = 280.0
+margin_bottom = 319.0
 custom_fonts/font = ExtResource( 1 )
 text = "Retry"
 __meta__ = {
@@ -59,14 +75,24 @@ __meta__ = {
 }
 
 [node name="QuitButton" type="Button" parent="VBoxContainer"]
-margin_top = 330.0
+margin_top = 339.0
 margin_right = 800.0
-margin_bottom = 396.0
+margin_bottom = 405.0
 custom_fonts/font = ExtResource( 1 )
 text = "Quit"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="HitNoise" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 400, 250 )
+stream = ExtResource( 3 )
+volume_db = 10.0
+
+[node name="WinNoise" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 400, 250 )
+stream = ExtResource( 4 )
+volume_db = 10.0
 
 [connection signal="pressed" from="VBoxContainer/NextLevelButton" to="." method="_on_NextLevelButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/RetryButton" to="." method="_on_RetryButton_pressed"]

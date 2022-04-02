@@ -8,7 +8,9 @@ onready var levels = [
 	load("res://scenes/game/levels/Level5.tscn"),
 	load("res://scenes/game/levels/Level6.tscn"),
 	load("res://scenes/game/levels/Level7.tscn"),
-	load("res://scenes/game/levels/Level8.tscn")
+	load("res://scenes/game/levels/Level8.tscn"),
+	load("res://scenes/game/levels/Level9.tscn"),
+	load("res://scenes/game/levels/Level10.tscn")
 ]
 
 onready var camera_node = $Camera
@@ -24,6 +26,7 @@ var time_taken = 0
 
 # 0 = setting, 1 = following
 var path_state = 0
+var start_time
 
 func _ready():
 	
@@ -41,6 +44,8 @@ func _ready():
 	
 	map_node.connect("player_entered", self, "_on_Map_player_entered")
 	map_node.connect("follow_entered", self, "_on_Map_follow_entered")
+	
+	start_time = OS.get_ticks_msec()
 
 func _process(delta):
 	pass
@@ -71,22 +76,24 @@ func _on_Map_player_entered():
 	$CanvasLayer/TimeLabel.text = "0"
 	time_taken = 0
 	$Timer.start()
+	$PathLaidNoise.play()
 
 func _on_Map_follow_entered():
-	ui.start(true)
+	
+	ui.completed(stepify((OS.get_ticks_msec() - start_time) / 1000.0, 0.01))
 
 func _on_FollowPlayer_death():
-	ui.start(false)
+	ui.failed("They did know!")
 
 func _on_IncreaseOverTimeLabel_complete(string_id):
-	ui.start(false)
+	ui.failed("Lets not spend all day, ye?")
 
 func _on_Player_death():
-	ui.start(false)
+	ui.failed("Plan failed...")
 
 func _on_Timer_timeout():
 	time_taken += 1
 	$CanvasLayer/TimeLabel.text = str(time_taken)
 
 func _on_RestartButton_pressed():
-	ui.start(false)
+	ui.failed("Take a breath, try again")
