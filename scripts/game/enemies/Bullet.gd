@@ -13,5 +13,5 @@ func _physics_process(delta):
 		translation.z += speed
 
 func _on_Bullet_body_entered(body):
-	if body.name == "FollowPlayer":
+	if body.name == "FollowPlayer" or body.name == "Player":
 		body.death()

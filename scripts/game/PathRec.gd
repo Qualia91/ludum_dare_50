@@ -33,6 +33,7 @@ func get_path():
 
 func _on_EnemyPosSaveTimeout_timeout():
 	enemy_poses.append(vertices.back())
+	$EnemyPosSaveTimeout.start(Global.rng.randf_range(1.5, 2.5))
 
 func _on_StartTime_timeout():
-	$EnemyPosSaveTimeout.start()
+	$EnemyPosSaveTimeout.start(Global.rng.randf_range(1.5, 2.5))

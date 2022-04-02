@@ -4,11 +4,12 @@
 
 [sub_resource type="SphereMesh" id=1]
 
-[sub_resource type="SpatialMaterial" id=3]
+[sub_resource type="SpatialMaterial" id=2]
+flags_transparent = true
 flags_unshaded = true
 albedo_color = Color( 2, 0, 0, 1 )
 
-[sub_resource type="CylinderMesh" id=2]
+[sub_resource type="CylinderMesh" id=3]
 top_radius = 0.1
 bottom_radius = 0.1
 height = 100.0
@@ -22,8 +23,8 @@ script = ExtResource( 1 )
 mesh = SubResource( 1 )
 
 [node name="AimMesh" type="CSGMesh" parent="."]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 51 )
-material_override = SubResource( 3 )
-mesh = SubResource( 2 )
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 50 )
+material_override = SubResource( 2 )
+mesh = SubResource( 3 )
 
 [connection signal="timeout" from="ShootTimer" to="." method="_on_ShootTimer_timeout"]

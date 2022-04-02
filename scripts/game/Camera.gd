@@ -24,8 +24,15 @@ func look_at_player(pos):
 	camera_node.look_at(pos, UP)
 
 func move_towards_player_quick(player_pos):
-	camera_node.translation.x = player_pos.x
-	camera_node.translation.y = player_pos.y + y_diff
+	var current_x = camera_node.translation.x
+	tween.interpolate_property(camera_node, "translation:x",
+		current_x, player_pos.x, 0.02,
+		Tween.TRANS_LINEAR)
+	var current_y = camera_node.translation.y
+	tween.interpolate_property(camera_node, "translation:y",
+		current_y, player_pos.y + y_diff, 0.02,
+		Tween.TRANS_LINEAR)
+	tween.start()
 	
 func move_towards_player(player_pos):
 	var current_x = camera_node.translation.x

@@ -19,7 +19,7 @@ func start(start_val, end_value, step, string_id):
 	self.value = end_value
 	self.string_id = string_id
 	self.step = step
-	text = str(current_val)
+	self.text = str(current_val)
 	match type:
 		0:
 			$Timer.start(time_step)
@@ -35,3 +35,7 @@ func _on_Timer_timeout():
 	else:
 		$Timer.stop()
 		emit_signal("complete", string_id)
+
+func stop():
+	$Timer.stop()
+	self.text = ""

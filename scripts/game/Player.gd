@@ -1,5 +1,7 @@
 extends KinematicBody
 
+signal death
+
 export var gravity = Vector3.DOWN * 10
 export var speed = 1.5
 export var jump_speed = 100
@@ -41,3 +43,6 @@ func get_input(delta):
 func _input(event):
 	if double_jump_active == 0 and Input.is_action_just_released("up"):
 		double_jump_active = 1
+
+func death():
+	emit_signal("death")
