@@ -9,40 +9,40 @@
 script = ExtResource( 3 )
 
 [node name="End" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 50.3464, 83.6923, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.6561, 83.6923, 0 )
 
 [node name="P1" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 40, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61.0025, 40, 0 )
 
 [node name="P10" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 20, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61.0025, 20, 0 )
 
 [node name="P2" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 40, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -51.0025, 40, 0 )
 
 [node name="P3" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 40, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -41.0025, 40, 0 )
 
 [node name="P4" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 80.463, 40, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.46046, 40, 0 )
 
 [node name="P5" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 90.463, 40, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.4605, 40, 0 )
 
 [node name="P6" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 130.908, 50, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 59.9055, 50, 0 )
 
 [node name="P7" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 131.165, 72.3262, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 60.1625, 72.3262, 0 )
 
 [node name="P8" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 86.3648, 76.5885, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.3623, 76.5885, 0 )
 
 [node name="HoleBarrier" parent="." instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 57.4365, 58.9927, 0 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -13.566, 58.9927, 0 )
 
 [node name="HoleBarrier2" parent="." instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 113.252, 55.673, 0 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 42.2495, 55.673, 0 )
 
 [connection signal="follow_entered" from="End" to="." method="_on_End_follow_entered"]
 [connection signal="player_entered" from="End" to="." method="_on_End_player_entered"]

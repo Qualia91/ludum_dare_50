@@ -9,73 +9,73 @@
 script = ExtResource( 3 )
 
 [node name="End" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 100, 10, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 43.1576, 17.5725, 0 )
 
 [node name="Bullet" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 34.8306, 12.5, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.0118, 20.0725, 0 )
 
 [node name="Bullet3" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 90, 12.5, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.1576, 20.0725, 0 )
 
 [node name="Bullet4" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 64.8306, 12.5, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.98823, 20.0725, 0 )
 
 [node name="Bullet7" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 96.3214, 20.8053, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 39.479, 28.3778, 0 )
 
 [node name="Bullet2" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 49.916, 20.9657, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.92636, 28.5382, 0 )
 
 [node name="Bullet6" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 79.9159, 20.9657, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.0735, 28.5382, 0 )
 
 [node name="Bullet9" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28.069, 20.8053, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28.7734, 28.3778, 0 )
 
 [node name="Bullet10" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 84.6118, 20.8053, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27.7694, 28.3778, 0 )
 
 [node name="Bullet11" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 58.069, 20.8053, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.22663, 28.3778, 0 )
 
 [node name="Bullet12" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 43.1543, 20.9657, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.6881, 28.5382, 0 )
 
 [node name="Bullet13" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 73.1543, 20.9657, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.3119, 28.5382, 0 )
 
 [node name="P1" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 10, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -46.8424, 17.5725, 0 )
 
 [node name="P2" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 10, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -36.8424, 17.5725, 0 )
 
 [node name="P3" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 10, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.8424, 17.5725, 0 )
 
 [node name="P4" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 10, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.8424, 17.5725, 0 )
 
 [node name="P5" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 10, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.84237, 17.5725, 0 )
 
 [node name="P6" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 10, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.15763, 17.5725, 0 )
 
 [node name="P7" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 70, 10, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.1576, 17.5725, 0 )
 
 [node name="P8" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 10, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.1576, 17.5725, 0 )
 
 [node name="P9" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 90, 10, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.1576, 17.5725, 0 )
 
 [node name="P21" parent="." instance=ExtResource( 4 )]
-transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 107, 22.1, 0 )
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 50.1576, 29.6725, 0 )
 
 [node name="P22" parent="." instance=ExtResource( 4 )]
-transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 107, 13, 0 )
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 50.1576, 20.5725, 0 )
 
 [connection signal="follow_entered" from="End" to="." method="_on_End_follow_entered"]
 [connection signal="player_entered" from="End" to="." method="_on_End_player_entered"]

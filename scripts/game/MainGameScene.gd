@@ -45,6 +45,8 @@ func _ready():
 	map_node.connect("player_entered", self, "_on_Map_player_entered")
 	map_node.connect("follow_entered", self, "_on_Map_follow_entered")
 	
+	player_node.start(map_node.get_end_pos())
+	
 	start_time = OS.get_ticks_msec()
 
 func _process(delta):

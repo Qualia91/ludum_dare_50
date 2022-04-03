@@ -7,13 +7,13 @@ var enemies = []
 var bullets = []
 
 var enemy_number
-var bullet_number = 20
+var bullet_number = 10
 
 var current_enemy_number = 0
 var current_bullet_number = 0
 
 export var speed = 10
-
+				
 var start = false
 
 func _ready():

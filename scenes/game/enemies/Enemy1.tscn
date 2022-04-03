@@ -10,7 +10,7 @@ flags_unshaded = true
 albedo_color = Color( 2, 0, 0, 1 )
 
 [sub_resource type="CylinderMesh" id=3]
-top_radius = 0.1
+top_radius = 0.05
 bottom_radius = 0.1
 height = 100.0
 

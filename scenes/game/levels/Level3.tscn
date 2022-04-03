@@ -8,16 +8,16 @@
 script = ExtResource( 3 )
 
 [node name="End" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 40, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40.1816, 40, 0 )
 
 [node name="P1" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -39.8184, 20, 0 )
 
 [node name="P2" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 40, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -39.8184, 40, 0 )
 
 [node name="P3" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 40, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.181599, 40, 0 )
 
 [connection signal="follow_entered" from="End" to="." method="_on_End_follow_entered"]
 [connection signal="player_entered" from="End" to="." method="_on_End_player_entered"]

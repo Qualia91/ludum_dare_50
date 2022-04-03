@@ -18,25 +18,34 @@ onready var jump_noises = [
 	$Jump7
 ]
 
-var velocity = Vector3.ZERO
+var velocity = Vector3(10, 0, 0)
 var double_jump_active = 0
 
 var on_floor = false
 
+var end_pos
+
+func start(end_pos):
+	pass
+
 func _ready():
-	pass # Replace with function body.
+	move_lock_z = true
 
 func _physics_process(delta):
+	
 	if !is_on_floor():
 		velocity += gravity * delta
 	else:
 		double_jump_active = 0
 	get_input(delta)
 	velocity = move_and_slide(velocity, Vector3.UP)
-	translation.z = 0
 
 func get_input(delta):
-	velocity.x /= slow_down
+	
+	if abs(velocity.x) > 1:
+		velocity.x /= slow_down
+	else:
+		velocity.x = 0
 	
 	if is_on_floor() and Input.is_action_pressed("up"):
 		velocity.y += jump_speed

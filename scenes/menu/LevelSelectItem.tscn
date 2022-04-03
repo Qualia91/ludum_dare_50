@@ -1,22 +1,41 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://assets/fonts/RubikGlitch-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/fonts/TitleFont.tres" type="DynamicFont" id=2]
 [ext_resource path="res://scripts/menu/LevelSelectItem.gd" type="Script" id=3]
+[ext_resource path="res://assets/fonts/PermanentMarker-Regular.ttf" type="DynamicFontData" id=4]
 
-[sub_resource type="DynamicFont" id=1]
-size = 150
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 0.552941 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.639216, 0.737255, 0.976471, 1 )
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="DynamicFont" id=2]
+size = 80
 outline_size = 10
-outline_color = Color( 0, 0, 0, 1 )
+outline_color = Color( 0.0784314, 0.129412, 0.239216, 1 )
 use_filter = true
 extra_spacing_char = 50
-font_data = ExtResource( 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 50
+use_filter = true
+extra_spacing_char = 10
+font_data = ExtResource( 4 )
 
 [node name="Item" type="Panel"]
 margin_right = 1200.0
-margin_bottom = 200.0
-rect_min_size = Vector2( 0, 200 )
+margin_bottom = 125.0
+rect_min_size = Vector2( 0, 125 )
 size_flags_horizontal = 3
+custom_styles/panel = SubResource( 1 )
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -33,16 +52,17 @@ __meta__ = {
 }
 
 [node name="Button" type="Button" parent="MainHBox"]
-margin_right = 400.0
-margin_bottom = 200.0
-rect_min_size = Vector2( 400, 200 )
-custom_fonts/font = SubResource( 1 )
+margin_right = 250.0
+margin_bottom = 121.0
+rect_min_size = Vector2( 250, 0 )
+custom_fonts/font = SubResource( 2 )
 text = "10"
+flat = true
 
 [node name="Label2" type="Label" parent="MainHBox"]
-margin_left = 450.0
-margin_right = 818.0
-margin_bottom = 200.0
+margin_left = 300.0
+margin_right = 725.0
+margin_bottom = 149.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 2 )
@@ -51,12 +71,12 @@ align = 1
 valign = 1
 
 [node name="BestTime" type="Label" parent="MainHBox"]
-margin_left = 868.0
+margin_left = 775.0
 margin_right = 1200.0
-margin_bottom = 200.0
+margin_bottom = 149.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "600"
 align = 1
 valign = 1

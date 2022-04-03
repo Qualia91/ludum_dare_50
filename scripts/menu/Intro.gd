@@ -10,6 +10,11 @@ onready var IO = IOClass.new()
 var save_data
 var first_time = false
 
+func _process(delta):
+	
+	var texture = $Viewport.get_texture()
+	$Screen.texture = texture
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
@@ -43,5 +48,6 @@ func _ready():
 	else:
 		AudioServer.set_bus_mute(0, false)
 		AudioServer.set_bus_volume_db(0, save_data["volume"])
-		
+
+func _on_AnimationPlayer_animation_finished(anim_name):
 	get_tree().change_scene("res://scenes/menu/Menu.tscn")

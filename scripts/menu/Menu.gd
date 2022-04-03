@@ -22,6 +22,11 @@ onready var jump_noises = [
 	$Jump7
 ]
 
+func _process(delta):
+	
+	var texture = $Viewport.get_texture()
+	$Screen.texture = texture
+
 func _ready():
 		
 	volume_slider.value = save_data["volume"]
