@@ -3,10 +3,11 @@ extends Panel
 const IOClass = preload("res://scripts/objects/IO.gd")
 onready var IO = IOClass.new()
 
-func completed(time):
+func completed(time, message):
 	$WinNoise.play()
 	get_tree().paused = true
 	visible = true
+	$VBoxContainer/Title.text = message
 	$VBoxContainer/NextLevelButton.visible = true
 	$VBoxContainer/TimeLabel.text = "Time: " + str(time)
 	

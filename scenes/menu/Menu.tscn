@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://assets/fonts/PermanentMarker-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/fonts/TitleFont.tres" type="DynamicFont" id=2]
@@ -13,11 +13,21 @@
 [ext_resource path="res://assets/audio/death_noise.mp3" type="AudioStream" id=11]
 [ext_resource path="res://scenes/menu/MenuBackground.tscn" type="PackedScene" id=12]
 [ext_resource path="res://assets/fonts/ButtonFont.tres" type="DynamicFont" id=13]
+[ext_resource path="res://assets/videos/follow_tut.webm" type="VideoStream" id=14]
+[ext_resource path="res://assets/videos/set_path_tut.webm" type="VideoStream" id=15]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
 use_filter = true
 extra_spacing_char = 30
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 25
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+extra_spacing_char = 5
 font_data = ExtResource( 1 )
 
 [node name="Menu" type="Node2D"]
@@ -200,16 +210,77 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VideoPlayer" type="VideoPlayer" parent="Menus/offset/HowToPlay"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Menus/offset/HowToPlay"]
+margin_right = 1200.0
+margin_bottom = 387.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PathTut" type="VideoPlayer" parent="Menus/offset/HowToPlay/HBoxContainer"]
+visible = false
+margin_right = 598.0
+margin_bottom = 387.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stream = ExtResource( 15 )
+
+[node name="PathTutLab" type="Label" parent="Menus/offset/HowToPlay/HBoxContainer"]
+visible = false
+margin_right = 1200.0
+margin_bottom = 387.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+text = "Part 1: Setting a Path
+
+Arrow keys or WASD to move left, right and jump
+Jump in air to do double jump
+Don't hit red stuff
+Get to platform with the yellow particles on"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FollowTut" type="VideoPlayer" parent="Menus/offset/HowToPlay/HBoxContainer"]
+visible = false
+margin_left = 604.0
 margin_right = 1200.0
 margin_bottom = 402.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+stream = ExtResource( 14 )
 
-[node name="HowToBackButton" type="Button" parent="Menus/offset/HowToPlay"]
-margin_top = 452.0
+[node name="FollowTutLab" type="Label" parent="Menus/offset/HowToPlay/HBoxContainer"]
+visible = false
+margin_left = 602.0
 margin_right = 1200.0
-margin_bottom = 530.0
+margin_bottom = 387.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+text = "Part 2: Follow the path
+
+You now follow the path you just drew
+Hold space to stop in place
+don't hit the red stuff again"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NextButton" type="Button" parent="Menus/offset/HowToPlay"]
+margin_top = 437.0
+margin_right = 1200.0
+margin_bottom = 515.0
+custom_fonts/font = ExtResource( 13 )
+text = "Next"
+flat = true
+
+[node name="HowToBackButton2" type="Button" parent="Menus/offset/HowToPlay"]
+margin_top = 565.0
+margin_right = 1200.0
+margin_bottom = 643.0
 custom_fonts/font = ExtResource( 13 )
 text = "Back"
 flat = true
@@ -249,5 +320,8 @@ stream = ExtResource( 5 )
 [connection signal="value_changed" from="Menus/offset/Settings/Volume/VolumeSlide" to="." method="_on_VolumeSlide_value_changed"]
 [connection signal="pressed" from="Menus/offset/Settings/SettingsBackButton" to="." method="_on_SettingsBackButton_pressed"]
 [connection signal="pressed" from="Menus/offset/LevelSelect/LevelSelectBackButton" to="." method="_on_LevelSelectBackButton_pressed"]
-[connection signal="pressed" from="Menus/offset/HowToPlay/HowToBackButton" to="." method="_on_HowToBackButton_pressed"]
+[connection signal="finished" from="Menus/offset/HowToPlay/HBoxContainer/PathTut" to="." method="_on_PathTut_finished"]
+[connection signal="finished" from="Menus/offset/HowToPlay/HBoxContainer/FollowTut" to="." method="_on_FollowTut_finished"]
+[connection signal="pressed" from="Menus/offset/HowToPlay/NextButton" to="." method="_on_NextButton_pressed"]
+[connection signal="pressed" from="Menus/offset/HowToPlay/HowToBackButton2" to="." method="_on_HowToBackButton_pressed"]
 [connection signal="finished" from="HitNoise" to="." method="_on_HitNoise_finished"]

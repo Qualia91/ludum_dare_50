@@ -1,9 +1,33 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/fonts/TitleFont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://scripts/menu/InGameUI.gd" type="Script" id=2]
 [ext_resource path="res://assets/audio/death_noise.mp3" type="AudioStream" id=3]
 [ext_resource path="res://assets/audio/win_noise.mp3" type="AudioStream" id=4]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.737255, 0.890196, 0.941176, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.898039, 0.898039, 0.898039, 1 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color( 0, 0, 0, 0.392157 )
+shadow_size = 2
+shadow_offset = Vector2( 2, 2 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0, 0, 0, 1 )
 
 [node name="UI" type="Panel"]
 pause_mode = 2
@@ -11,9 +35,11 @@ grow_horizontal = 2
 grow_vertical = 2
 rect_min_size = Vector2( 800, 500 )
 rect_pivot_offset = Vector2( 400, 250 )
+custom_styles/panel = SubResource( 1 )
 script = ExtResource( 2 )
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": false,
+"_editor_description_": "20"
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -26,9 +52,9 @@ __meta__ = {
 }
 
 [node name="Title" type="Label" parent="VBoxContainer"]
-margin_top = 93.0
+margin_top = 75.0
 margin_right = 800.0
-margin_bottom = 153.0
+margin_bottom = 147.0
 rect_pivot_offset = Vector2( 400, 30 )
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
@@ -41,9 +67,9 @@ __meta__ = {
 }
 
 [node name="TimeLabel" type="Label" parent="VBoxContainer"]
-margin_top = 173.0
+margin_top = 167.0
 margin_right = 800.0
-margin_bottom = 233.0
+margin_bottom = 239.0
 rect_pivot_offset = Vector2( 400, 30 )
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
@@ -55,9 +81,13 @@ __meta__ = {
 
 [node name="NextLevelButton" type="Button" parent="VBoxContainer"]
 visible = false
-margin_top = 210.0
-margin_right = 800.0
-margin_bottom = 276.0
+margin_left = 10.0
+margin_top = 213.0
+margin_right = 790.0
+margin_bottom = 285.0
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
 custom_fonts/font = ExtResource( 1 )
 text = "Next Level"
 __meta__ = {
@@ -65,9 +95,12 @@ __meta__ = {
 }
 
 [node name="RetryButton" type="Button" parent="VBoxContainer"]
-margin_top = 253.0
+margin_top = 259.0
 margin_right = 800.0
-margin_bottom = 319.0
+margin_bottom = 331.0
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
 custom_fonts/font = ExtResource( 1 )
 text = "Retry"
 __meta__ = {
@@ -75,9 +108,12 @@ __meta__ = {
 }
 
 [node name="QuitButton" type="Button" parent="VBoxContainer"]
-margin_top = 339.0
+margin_top = 351.0
 margin_right = 800.0
-margin_bottom = 405.0
+margin_bottom = 423.0
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
 custom_fonts/font = ExtResource( 1 )
 text = "Quit"
 __meta__ = {

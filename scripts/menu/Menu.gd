@@ -91,9 +91,13 @@ func _on_LevelSelectBackButton_pressed():
 	tween_trans(Vector2(-2000, 0), Vector2(0, 0))
 	
 func _on_HowToBackButton_pressed():
+	tut_pos = 0
+	$Menus/offset/HowToPlay/HBoxContainer/FollowTut.stop()
+	$Menus/offset/HowToPlay/HBoxContainer/PathTut.stop()
 	tween_trans(Vector2(0, -2000), Vector2(0, 0))
 
 func _on_HowToPlayButton_pressed():
+	play_tut()
 	tween_trans(Vector2(0, 0), Vector2(0, -2000))
 
 func _on_QuitButton_pressed():
@@ -101,3 +105,35 @@ func _on_QuitButton_pressed():
 
 func _on_HitNoise_finished():
 	get_tree().quit()
+
+var tut_pos = 0
+
+func _on_NextButton_pressed():
+	play_tut()
+
+func play_tut():
+	match tut_pos:
+		0:
+			$Menus/offset/HowToPlay/HBoxContainer/PathTut.visible = true
+			$Menus/offset/HowToPlay/HBoxContainer/PathTutLab.visible = true
+			$Menus/offset/HowToPlay/HBoxContainer/FollowTut.visible = false
+			$Menus/offset/HowToPlay/HBoxContainer/FollowTutLab.visible = false
+			$Menus/offset/HowToPlay/HBoxContainer/PathTut.play()
+			$Menus/offset/HowToPlay/HBoxContainer/FollowTut.stop()
+			$Menus/offset/HowToPlay/NextButton.text = "NEXT"
+			tut_pos = 1
+		1:
+			$Menus/offset/HowToPlay/HBoxContainer/PathTut.visible = false
+			$Menus/offset/HowToPlay/HBoxContainer/PathTutLab.visible = false
+			$Menus/offset/HowToPlay/HBoxContainer/FollowTut.visible = true
+			$Menus/offset/HowToPlay/HBoxContainer/FollowTutLab.visible = true
+			$Menus/offset/HowToPlay/HBoxContainer/PathTut.stop()
+			$Menus/offset/HowToPlay/HBoxContainer/FollowTut.play()
+			$Menus/offset/HowToPlay/NextButton.text = "PREVIOUS"
+			tut_pos = 0
+			
+func _on_PathTut_finished():
+	$Menus/offset/HowToPlay/HBoxContainer/PathTut.play()
+
+func _on_FollowTut_finished():
+	$Menus/offset/HowToPlay/HBoxContainer/FollowTut.play()

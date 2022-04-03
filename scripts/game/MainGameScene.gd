@@ -82,7 +82,7 @@ func _on_Map_player_entered():
 
 func _on_Map_follow_entered():
 	
-	ui.completed(stepify((OS.get_ticks_msec() - start_time) / 1000.0, 0.01))
+	ui.completed(stepify((OS.get_ticks_msec() - start_time) / 1000.0, 0.01), "Got em!")
 
 func _on_FollowPlayer_death():
 	ui.failed("They did know!")

@@ -134,10 +134,8 @@ anims/intro = SubResource( 1 )
 
 [node name="1" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 5 )
-volume_db = 20.0
 
 [node name="2" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 6 )
-volume_db = 20.0
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

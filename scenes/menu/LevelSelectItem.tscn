@@ -53,7 +53,7 @@ __meta__ = {
 
 [node name="Button" type="Button" parent="MainHBox"]
 margin_right = 250.0
-margin_bottom = 121.0
+margin_bottom = 125.0
 rect_min_size = Vector2( 250, 0 )
 custom_fonts/font = SubResource( 2 )
 text = "10"
@@ -62,7 +62,7 @@ flat = true
 [node name="Label2" type="Label" parent="MainHBox"]
 margin_left = 300.0
 margin_right = 725.0
-margin_bottom = 149.0
+margin_bottom = 125.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 2 )
@@ -73,7 +73,7 @@ valign = 1
 [node name="BestTime" type="Label" parent="MainHBox"]
 margin_left = 775.0
 margin_right = 1200.0
-margin_bottom = 149.0
+margin_bottom = 125.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 3 )
