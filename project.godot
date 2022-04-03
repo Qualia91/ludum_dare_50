@@ -14,7 +14,7 @@ config/name="It's like they knew"
 config/description="Ludum Dar 50 entry!"
 run/main_scene="res://scenes/menu/Intro.tscn"
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
-config/icon="res://icon.png"
+config/icon="res://assets/textures/icon.png"
 
 [autoload]
 

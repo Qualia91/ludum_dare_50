@@ -3,6 +3,9 @@ extends Panel
 const IOClass = preload("res://scripts/objects/IO.gd")
 onready var IO = IOClass.new()
 
+func _ready():
+	$BackgroundMusic.play(Global.music_pos)
+
 func completed(time, message):
 	$WinNoise.play()
 	get_tree().paused = true
@@ -29,14 +32,17 @@ func failed(message):
 	visible = true
 
 func _on_RetryButton_pressed():
+	Global.music_pos = $BackgroundMusic.get_playback_position()
 	get_tree().paused = false
 	get_tree().reload_current_scene()
 
 func _on_QuitButton_pressed():
 	get_tree().paused = false
+	Global.music_pos = 0
 	get_tree().change_scene("res://scenes/menu/Menu.tscn")
 
 func _on_NextLevelButton_pressed():
 	Global.level += 1
 	get_tree().paused = false
+	Global.music_pos = $BackgroundMusic.get_playback_position()
 	get_tree().reload_current_scene()

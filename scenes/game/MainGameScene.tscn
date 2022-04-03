@@ -58,10 +58,11 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -280.0
-margin_top = -66.0
+margin_left = -281.0
+margin_top = -81.0
+margin_right = -1.0
+margin_bottom = -3.0
 custom_fonts/font = ExtResource( 9 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Restart"
 flat = true
 __meta__ = {
@@ -76,7 +77,7 @@ margin_right = 40.5
 margin_bottom = 60.0
 grow_horizontal = 0
 custom_fonts/font = ExtResource( 9 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 2, 0, 0, 1 )
 
 [node name="TimeLabel" type="Label" parent="CanvasLayer"]
 anchor_left = 0.5
@@ -107,7 +108,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20 )
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.783238, -2.71763e-08, 0.621722, -0.621722, -3.42364e-08, 0.783238, 0, -1, -4.37114e-08, 0, 0, 0 )
 light_color = Color( 0.952941, 0.647059, 0, 1 )
-light_energy = 2.67
+light_energy = 3.26
 shadow_enabled = true
 
 [node name="CameraMoveTimeout" type="Timer" parent="."]

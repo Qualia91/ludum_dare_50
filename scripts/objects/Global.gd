@@ -18,3 +18,5 @@ var level_times = [
 ]
 
 var menu_pos = Vector2(0, 0)
+
+var music_pos = 0

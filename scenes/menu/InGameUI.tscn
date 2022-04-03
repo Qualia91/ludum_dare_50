@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/fonts/TitleFont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://scripts/menu/InGameUI.gd" type="Script" id=2]
 [ext_resource path="res://assets/audio/death_noise.mp3" type="AudioStream" id=3]
 [ext_resource path="res://assets/audio/win_noise.mp3" type="AudioStream" id=4]
+[ext_resource path="res://assets/audio/background_music.mp3" type="AudioStream" id=5]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.737255, 0.890196, 0.941176, 1 )
@@ -129,6 +130,10 @@ volume_db = 10.0
 position = Vector2( 400, 250 )
 stream = ExtResource( 4 )
 volume_db = 10.0
+
+[node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 5 )
+max_distance = 10000.0
 
 [connection signal="pressed" from="VBoxContainer/NextLevelButton" to="." method="_on_NextLevelButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/RetryButton" to="." method="_on_RetryButton_pressed"]
